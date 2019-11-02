@@ -114,8 +114,9 @@ const DynamicInputs = () => {
 
   return (
     <React.Fragment>
-      {Object.keys(values).map((valueKey, num) => (
+      {Object.keys(values).map((valueKey, iterationIndice) => (
         <Input
+          key={iterationIndice}
           label={valueKey}
           value={values[valueKey]}
           handler={createHandlderFor(valueKey)}
